@@ -1,0 +1,10 @@
+[<%= link_to "Home",root_url()%>]<br/>
+  <% if flash[:error] %> 
+    <p style="color:red"><%= flash[:error]%></p>
+  <% end %>
+  <% tree_info(@post)%>
+  <ul>
+  <%= create_tree(@post).html_safe%>
+  </ul>
+
+  <%= paginate()%>

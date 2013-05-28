@@ -1,0 +1,11 @@
+<%= form_for(Post.new) do |f| %>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+    <%= f.hidden_field :parent_id, :value => post.id %>
+    <%= f.hidden_field :root_parent_id, :value => params[:id] %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
