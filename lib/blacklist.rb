@@ -47,10 +47,6 @@ module Blacklist
           self.set_word(word)
           self.censor
           if self.word != self.original_word
-            puts self.original_word
-            puts "="*100
-            puts self.word
-            puts "="*100
             comment.sub! self.original_word ,self.word
           end
         end
